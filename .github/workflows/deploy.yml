@@ -14,7 +14,7 @@ jobs:
           host: 37.60.251.94
           username: seyha
           key: ${{ secrets.SSH_KEY }}
-          port: 2233
+          port: 1133
           script: |
             . ~/.nvm/nvm.sh
             whoami
