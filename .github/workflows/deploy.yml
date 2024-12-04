@@ -11,8 +11,16 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.2.0
         with:
-          host: localhost
-          username: root
-          password: admin
+          host: 37.60.251.94
+          username: seyha
+          key: ${{ secrets.SSH_KEY }}
           port: 2233
-          script: whoami
+          script: |
+            . ~/.nvm/nvm.sh
+            whoami
+            pwd
+            ls
+            cd devops-cadt-2
+            git pull
+            pm2 restart devops-test
+
