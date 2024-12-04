@@ -1,4 +1,4 @@
-name: Test API
+name: deployment
 on:
   push:
     branches: master
@@ -20,7 +20,7 @@ jobs:
             whoami
             pwd
             ls
-            cd devops-cadt-2
+            cd dev-ops
             git pull
-            pm2 restart devops-test
+            pm2 restart dev-ops
 
